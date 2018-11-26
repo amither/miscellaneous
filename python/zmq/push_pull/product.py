@@ -10,8 +10,10 @@ def product(id):
     socket = ctx.socket(zmq.PUSH)
     socket.connect("tcp://localhost:{}".format(port))
     for i in range(1000):
-      socket.send("product{} message {}".format(id, i))
-      time.sleep(1)
+      msg = "product{} message {}".format(id, i)
+      socket.send(msg)
+      print(msg)
+      
 
 
 for i in range(2):

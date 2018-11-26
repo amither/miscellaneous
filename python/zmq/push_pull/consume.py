@@ -12,7 +12,6 @@ def consume(id):
     for i in range(1000):
       msg =  socket.recv()
       print("consume {} recv: {}".format(id, msg))
-      time.sleep(3)
 for i in range(2):
     t = threading.Thread(target=consume, args=(i,))
     t.start()
