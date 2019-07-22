@@ -7,6 +7,7 @@
 #include <iterator>
 #include <future>
 #include <iostream>
+#include <numeric>
 using namespace std;
 
 using WordCountMapType = map<string, int>;
@@ -26,9 +27,15 @@ WordCountMapType count_file(const string &file)
 template <typename MapIt>
 void showCommonWords(MapIt begin, MapIt end, size_t n)
 {
+    #if 0
     vector<MapIt> vecCount;
     vecCount.reserve(distance(begin, end));
     for (auto i = begin; i != end; i++) vecCount.push_back(i);
+    #else
+    vector<MapIt> vecCount(distance(begin, end));
+    iota(vecCount.begin(), vecCount.end(), begin);
+    
+    #endif
     
     auto iEnd = vecCount.begin() + n  ;
     partial_sort(vecCount.begin(), iEnd, vecCount.end(), [](WordCountMapType::iterator v1, WordCountMapType::iterator v2)
