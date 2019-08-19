@@ -29,26 +29,26 @@ void print(vector<vector<int> > &vec, int i, int j, string l, string r)
         return;
     }
 
-    if (vec[i-1][j-1] + 1 == vec[i][i])
+    if (vec[i-1][j-1] + 1 == vec[i][j] && r[i] == l[j])
     {
         print(vec, i-1, j-1, l , r);
         cout << l[j] << " ";
         return;
     }
 
-    if (vec[i-1][j-1]  == vec[i][i])
+    if (vec[i-1][j-1]  == vec[i][j])
     {
         print(vec, i-1, j-1, l, r);
         return;
     }
 
-    if (vec[i-1][j]  == vec[i][i])
+    if (vec[i-1][j]  == vec[i][j])
     {
         print(vec, i-1, j, l, r);
         return;
     }
 
-    if (vec[i][j-1]  == vec[i][i])
+    if (vec[i][j-1]  == vec[i][j])
     {
         print(vec, i, j-1, l, r);
         return;
