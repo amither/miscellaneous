@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include "singleton.h"
+#include <future>
 using namespace std;
 
 class C 
@@ -31,10 +33,20 @@ void f(const C &c)
 }
 int main()
 {
+    /*
     C c;
     C &d = c;
     f(d);
     f(move(c));
     f(g());
+    */
+
+    cout << "singleton" << endl;
+    auto e = async([=]{cout << "thread e"<< endl;C *e = singleton<C>::get(); return e;});
+    auto g = async([=]{cout << "thread g"<< endl;C *e = singleton<C>::get(); return e;});
+    e.get();
+    g.get();
+    
+
     return 0;
 }
