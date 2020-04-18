@@ -5,6 +5,12 @@ brew install vim
 ```
 /usr/local/bin/vim加到PATH
 系统自带的vim有各种问题
+## install oh-my-zsh
+```
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+brew install autojump
+```
+reference [zsh+on-my-zsh配置教程指南](https://segmentfault.com/a/1190000013612471)
 ## disable csrutil
 `csrutil status` view sip status
 1. Turn off your Mac (Apple > Shut Down).
