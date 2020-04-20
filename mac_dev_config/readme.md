@@ -1,16 +1,13 @@
 ## install brew
 ## install vim
+系统自带的vim有各种问题
 ```
 brew install vim
 ```
 /usr/local/bin/vim加到PATH
-系统自带的vim有各种问题
-## install oh-my-zsh
 ```
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 brew install autojump
 ```
-reference [zsh+on-my-zsh配置教程指南](https://segmentfault.com/a/1190000013612471)
 ## disable csrutil
 `csrutil status` view sip status
 1. Turn off your Mac (Apple > Shut Down).
@@ -24,16 +21,14 @@ reference [zsh+on-my-zsh配置教程指南](https://segmentfault.com/a/119000001
 ```
 brew install coreutils
 ```
-for gdircolors, gls...commands
+for commands as gdircolors, gls
 
 ## install iterm2
 ## config solarized color
 ```
 wget https://ethanschoonover.com/solarized/files/solarized.zip
 ```
-
-### config iterm2, vim color according to readme in solarized dir.
-...
+config iterm2, vim color according to readme in solarized dir.
 
 ## config dircolor
 ```
@@ -53,10 +48,10 @@ git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/pack/dist/start/nerdtree
 git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 git clone https://github.com/tpope/vim-fugitive.git ~/.vim/pack/dist/start/vim-fugitive
+git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/pack/plugins/start/ctrlp
 ```
 
 ### todo
 auto-pairs
-ctrlp: fuzzy search 
 
 
