@@ -1,0 +1,66 @@
+set nu
+syntax enable
+syntax on
+set background=dark
+colorscheme solarized
+set ai
+
+set cursorline "highlight current line
+filetype plugin indent on
+set backspace=indent,eol,start
+
+" 定义快捷键的前缀，即<Leader>
+let mapleader=","
+
+" ==== 系统剪切板复制粘贴 ====
+" v 模式下复制内容到系统剪切板
+vmap <Leader>c "+y
+" n 模式下复制一行到系统剪切板
+nmap <Leader>c "+yy
+" n 模式下粘贴系统剪切板的内容
+nmap <Leader>v "+p
+
+"vim-go
+let g:go_fmt_command = "goimports"    "Run goimports along gofmt on each save
+let g:go_auto_type_info = 1           "Automatically get signature/type info for object under cursor
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_auto_sameids = 1
+
+let g:ctrlp_map = '<c-p>'
+
+" If you want to disable gofmt on save
+" let g:go_fmt_autosave = 0
+
+" NERDTree plugin specific commands
+nnoremap <C-g> :NERDTreeToggle<CR>
+
+"shortcuts for quickfix list
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+" Flash screen instead of beep sound
+set visualbell
+
+" Change how vim represents characters on the screen
+set encoding=utf-8
+
+" Set the encoding of files written
+set fileencoding=utf-8
+
+"write the file automatically when make
+set autowrite
+
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype go setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+" ts - show existing tab with 4 spaces width
+" sw - when indenting with '>', use 4 spaces width
+" sts - control <tab> and <bs> keys to match tabstop
+
+" Control all other files
+set shiftwidth=4
