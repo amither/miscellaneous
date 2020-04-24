@@ -3,6 +3,7 @@
 系统自带的vim有各种问题
 ```
 brew install vim
+brew install macvim
 ```
 /usr/local/bin/vim加到PATH
 ```

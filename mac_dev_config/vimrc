@@ -27,7 +27,7 @@ let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
-let g:go_auto_sameids = 1
+"let g:go_auto_sameids = 1
 
 let g:ctrlp_map = '<c-p>'
 
@@ -64,3 +64,4 @@ autocmd FileType go nmap <leader>r  <Plug>(go-run)
 
 " Control all other files
 set shiftwidth=4
+set guifont=Monaco:h14
