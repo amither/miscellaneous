@@ -45,11 +45,13 @@ vim 8 has a very strong package mangement.
 reference [My Vim IDE setup for Go](https://app.getpocket.com/read/2568835637)
 
 ```
-git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
+git clone https://github.com/fatih/vim-go.git ~/.vim/pack/dist/start/vim-go
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/pack/dist/start/nerdtree
 git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 git clone https://github.com/tpope/vim-fugitive.git ~/.vim/pack/dist/start/vim-fugitive
-git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/pack/plugins/start/ctrlp
+git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/pack/dist/start/ctrlp
+
+git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/colors/start/gruvbox
 ```
 
 ### todo
