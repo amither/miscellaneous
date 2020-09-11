@@ -82,4 +82,5 @@ git clone https://github.com/jiangmiao/auto-pairs.git ~/.vim/pack/plugins/start/
 git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim/pack/dist/start/YouCompleteMe && cd  ~/.vim/pack/dist/start/YouCompleteMe && git submodule update --init --recursive && python3 ./install.py --clang-completer
 ```
 
-
+## 安装fswatch
+监听文件改变，同步代码到开发机。执行sync.sh
