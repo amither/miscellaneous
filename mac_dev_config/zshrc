@@ -1,22 +1,28 @@
+alias proxy_dev='export http_proxy=http://127.0.0.1:12639; export https_proxy=http://127.0.0.1:12639'
+alias unproxy='unset all_proxy; unset http_proxy; unset https_proxy'
+proxy_dev
+
+alias dev='ssh -p 36000 root@9.135.9.238'
 eval `gdircolors ~/.dircolors.256dark`
 alias -g ls='gls --color=auto'
-alias -g  ll='gls -l --color=auto'
-alias -g  dev='ssh test@10.12.77.132'
+alias -g ll='gls -l --color=auto'
 alias typora="open -a typora"
 #autoload -Uz compinit && compinit
-PROMPT='%2~ %# '
 
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
-RPROMPT=\$vcs_info_msg_0_
+#RPROMPT=\$vcs_info_msg_0_
+PROMPT='%2~$vcs_info_msg_0_ %# '
 #zstyle ':vcs_info:git:*' formats '%F{100}(%b)%r%f'
 zstyle ':vcs_info:git:*' formats '%F{100}(%b)%f'
 zstyle ':vcs_info:*' enable git
 
-export PATH=/usr/local/bin/:$HOME/go/bin:$HOME/bin:$PATH
+export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:$HOME/go/bin:$HOME/bin:/Library/Developer/CommandLineTools/usr/bin:$PATH
 export GO111MODULE=auto
 
 # config autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+
